@@ -7,7 +7,7 @@ public class TimerLibraryClass {
 
 
 
-    public static void timerMethod(final TextView textView, final String secondsToShow) {
+    public static String timerMethod(final TextView textView, final String secondsToShow) {
         new CountDownTimer(10000, 1000) {
 
             public void onTick(long millisUntilFinished) {
@@ -15,15 +15,11 @@ public class TimerLibraryClass {
             }
 
             public void onFinish() {
-                textView.setText("done, Restarting");
-                try {
-                    wait(2000);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-                timerMethod(textView,secondsToShow);
+                textView.setText("done");
             }
         }.start();
+
+        return "done";
     }
 
 

@@ -10,6 +10,7 @@ import com.nizam.timerlibrary.TimerLibraryClass;
 public class MainActivity extends AppCompatActivity {
 
     TextView textView;
+    String timerResponse = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
         textView = findViewById(R.id.text_view);
 
-        TimerLibraryClass.timerMethod(textView, "10");
+      timerResponse =   TimerLibraryClass.timerMethod(textView, "10");
 
     }
 
