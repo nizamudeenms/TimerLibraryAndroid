@@ -15,7 +15,8 @@ public class TimerLibraryClass {
             }
 
             public void onFinish() {
-                textView.setText("done");
+                textView.setText("Completed");
+                timerMethod(textView, secondsToShow);
             }
         }.start();
 
