@@ -4,6 +4,9 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
+import com.nizam.timerlibrary.TimerLibraryClass;
+
+
 public class MainActivity extends AppCompatActivity {
 
     TextView textView;
@@ -16,8 +19,7 @@ public class MainActivity extends AppCompatActivity {
 
         textView = findViewById(R.id.text_view);
 
-
-
+        TimerLibraryClass.timerMethod(textView, "10");
 
     }
 
